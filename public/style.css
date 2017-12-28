@@ -1,0 +1,198 @@
+hr {
+  width: 100%;
+  border-color: orange;
+}
+
+/*Poker Table*/
+.poker .main-container {
+  position: relative;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.poker .table-img {
+  width: 100%;
+}
+
+.poker .main-container .pair-img {
+  position: absolute;
+  opacity: 0;
+  bottom: 10%;
+  left:-1%;
+  -webkit-transition: left 1s, opacity 0.7s; /* Safari */
+  transition: left 1s, opacity 0.7s;
+}
+
+.poker .main-container:hover .pair-img {
+  opacity: 1;
+  left:45.5%;
+  -webkit-transition-timing-function: cubic-bezier(0.5,0,0.6,1.3);
+  transition-timing-function: cubic-bezier(0.5,0,0.6,1.3);
+}
+
+.poker .main-container .question {
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s; /* Safari */
+  transition: opacity 0.7s;
+}
+
+.poker .main-container:hover .question {
+  opacity: 1;
+  -webkit-transition-timing-function: cubic-bezier(0.5,0,1,1);
+  transition-timing-function: cubic-bezier(0.5,0,1,1);
+}
+
+.poker p {
+  font-size: 2.5vw;
+  margin: 0px;
+}
+/*End Poker Table*/
+
+/*Guardians*/
+#guardians #menu {
+    max-width: 890px;
+    text-align: center;
+    margin: auto;
+}
+#guardians .zoomimg {
+    display: inline-block;
+    width: 250px;
+    height: 375px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all .4s ease;
+    position: relative;
+}
+#guardians .zoomimg:hover {
+    cursor: pointer;
+    background-size: 115% 115%;
+}
+#guardians .star-lord {
+    background-image: url(img/star-lord.jpg);
+}
+#guardians .gamora {
+    background-image: url(img/gamora.jpg);
+}
+#guardians .drax {
+    background-image: url(img/drax.jpg);
+}
+#guardians .rocket {
+    background-image: url(img/rocket.jpg);
+}
+#guardians .groot {
+    background-image: url(img/groot.jpg);
+}
+
+/*CSS to Add an Overlay*/
+#guardians .zoomimg:after {
+    position: absolute;
+    background-color: rgba(0,0,0,.35);
+    content: 'More info';
+    padding-top: 171px;
+    font-size: 32px;
+    color: #A8A8A8;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 375px;
+    opacity: 0;
+    transition: opacity .4s linear;
+    /*Making same size as parent div*/
+    box-sizing: border-box;
+}
+#guardians .zoomimg:hover:after {
+    opacity: 1;
+}
+/*End Guardians*/
+
+/*Beach*/
+#beach .tile {
+  position: relative;
+  width: 626px;
+  margin: 0 auto;
+}
+
+#beach .tile .copy {
+  position: absolute;
+  left: 157px;
+  top: 133px;
+  font-family: cursive;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  -webkit-transform: rotate(-20deg); /* Safari */
+  transform: rotate(-20deg); /* Standard syntax */
+}
+
+#beach h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#beach ol {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+#beach span {
+  /*Starting animation when visible and creating two steps to switch between visible and invisible*/
+  animation: blinking 1s steps(2, start) infinite;
+  -webkit-animation: blinking 1s steps(2, start) infinite;
+}
+/*Giving a name to action and */
+@keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+/*End Beach*/
+
+/*It*/
+#it .house-wrapper {
+  width: 1600px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+#it .pennywise {
+  position: absolute;
+  opacity: 0;
+  left: 37%;
+  bottom: 3px;
+  width: 14%;
+  /*Starting animation when visible and creating 150 steps to switch from 1 to 0 opacity over 10seconds*/
+  animation: disappear 20s steps(200, end) infinite;
+  -webkit-animation: disappear 20s steps(200, end) infinite;
+}
+/*Giving a name to action and */
+/*@keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}*/
+@keyframes disappear {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 1;}
+  75% {opacity: 0;}
+}
+
+@-webkit-keyframes disappear {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 1;}
+  75% {opacity: 0;}
+}
+/*End It*/
